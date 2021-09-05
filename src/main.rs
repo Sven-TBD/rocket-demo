@@ -2,6 +2,15 @@ use rocket::serde::json::{Value};
 use rocket::serde::json::serde_json::json;
 use rocket::{catch, catchers, delete, get, post, put, routes};
 
+pub struct BasicAuthStruct{
+    pub username: String,
+    pub password: String,
+
+}
+
+impl BasicAuthStruct {
+    
+}
 
 #[get("/")]
 fn index() -> &'static str {
